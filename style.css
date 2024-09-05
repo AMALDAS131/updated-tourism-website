@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header-bg {
+    background-color: rgb(6, 146, 215);
+    color: white;
+}
+
+.header-bg .logo {
+    max-width: 100px;
+}
+
+.header-bg h3 {
+    margin: 0;
+    font-size: 24px;
+    font-family: Aclonica;
+}
+
+.header-bg p {
+    margin: 0;
+    font-size: 16px;
+    font-family: Serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    margin: 0 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+.separator {
+    border: 0;
+    height: 2px;
+    background-color: black;
+}
+
+/* Carousel Styles */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-discover {
+    /* position: absolute; */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: red 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: red;
+    color: rgb(182, 26, 26);
+}
+
+/* Image Box Styles */
+
+
+.row {
+    margin-top: 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 200px;
+    transition: opacity 0.3s;
+}
+
+.image-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.image-box:hover .overlay {
+    opacity: 1;
+}
+
+.overlay div {
+    text-align: center;
+}
+
+.golden-overlay { background-color: rgba(255, 215, 0, 0.7); }
+.black-overlay { background-color: rgba(0, 0, 0, 0.7); }
+.green-overlay { background-color: rgba(0, 128, 0, 0.7); }
+.blue-overlay { background-color: rgba(0, 0, 255, 0.7); }
+.yellow-overlay { background-color: rgba(255, 255, 0, 0.7); }
+.pink-overlay { background-color: rgba(255, 105, 180, 0.7); }
+
+/* Must Do Activities Styles */
+.activities-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    position: relative;
+    font-family: "Trirong", serif;
+}
+
+.activities-heading::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: black;
+    margin: 10px auto 0;
+}
+
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.activity-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.activity-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.activity-label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.activity-box:hover .activity-label {
+    transform: translateX(-50%) translateY(-20px);
+    background-color: #f8f9fa;
+}
+
+.activity-box:hover img {
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+.social-icon {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-bg h1, .header-bg p {
+        font-size: 18px;
+    }
+
+    .header-bg .logo {
+        max-width: 80px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+    
+    .activity-box {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .btn-discover {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
